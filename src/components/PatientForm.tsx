@@ -14,7 +14,7 @@ export default function PatientForm() {
     const clearActiveId = usePatientStore(state => state.clearActiveId)
 
     const { register, handleSubmit, setValue, formState: { errors }, reset } = useForm<DraftPatient>()
-    console.log(activeId)
+    
     useEffect(() => {
         if (activeId) {
             const activePatient = patients.filter(patient => patient.id === activeId)[0]
